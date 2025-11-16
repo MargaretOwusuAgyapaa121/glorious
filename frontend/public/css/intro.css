@@ -1,0 +1,118 @@
+.intro-wrapper {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1b1f3a, #313864, #48517a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.intro-card {
+  background: white;
+  max-width: 650px;
+  padding: 40px 35px;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+  text-align: center;
+  position: relative;
+  overflow: hidden; /* VERY IMPORTANT */
+}
+
+/* Blurred logo inside the card */
+.intro-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 350px;       /* size of the logo */
+  height: 350px;
+  background-image: url("../assets/images/logo.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.9;       /* faint and soft */
+  transform: translate(-50%, -50%);
+  filter: blur(1px);   /* slight blur */
+  z-index: 0;
+}
+
+/* Make sure all text stays ABOVE the logo */
+.intro-card * {
+  position: relative;
+  z-index: 1;
+}
+
+
+.ministry-title {
+  font-size: 30px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #1b1f3a;
+}
+
+.sub-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.retreat-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1d2951;
+  margin-bottom: 5px;
+}
+
+.location {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #444;
+}
+
+.theme {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #222;
+}
+
+.theme span {
+  color: #1b1f3a;
+  font-weight: 700;
+}
+
+.guest-header {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1d2951;
+}
+
+.guests {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.guests li {
+  font-size: 18px;
+  padding: 6px 0;
+  color: #333;
+  font-weight: 500;
+}
+
+.interest-btn {
+  background: #1d2951;
+  color: white;
+  padding: 15px 30px;
+  font-size: 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.interest-btn:hover {
+  background: #11182f;
+}
