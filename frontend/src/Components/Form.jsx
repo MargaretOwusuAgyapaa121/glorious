@@ -17,7 +17,7 @@ export default function ApplyForm() {
     e.preventDefault();
 
     try {
-      await axios.post("http://localhost:5000/api/submit", form);
+      await axios.post("https://railway.com/project/e41580f3-e25d-4f32-bfd3-dbb8876e6153?", form);
 
       alert("Form Submitted Successfully!");
 
