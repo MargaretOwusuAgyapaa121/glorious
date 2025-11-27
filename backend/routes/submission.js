@@ -10,7 +10,7 @@ router.post("/submit", (req, res) => {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  const sql = "INSERT INTO applications (name, email, phone, address) VALUES (?, ?, ?, ?)";
+  const sql = "INSERT INTO camp_db (name, email, phone, address) VALUES (?, ?, ?, ?)";
   db.query(sql, [name, email, phone, address], (err, result) => {
     if (err) return res.status(500).json({ error: err });
     res.json({ message: "Form submitted successfully!" });
