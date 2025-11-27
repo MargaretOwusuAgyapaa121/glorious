@@ -40,7 +40,7 @@ router.post("/submit", (req, res) => {
     return res.status(400).json({ message: "All fields are required" });
   }
 
-  const sql = "INSERT INTO camp_db (name, email, phone, address) VALUES (?, ?, ?, ?)";
+  const sql = "INSERT INTO camp_db_new (name, email, phone, address) VALUES (?, ?, ?, ?)";
   db.query(sql, [name, email, phone, address], (err, result) => {
     if (err) {
       console.error("MySQL error:", err);
@@ -52,7 +52,7 @@ router.post("/submit", (req, res) => {
 
 // GET /api/submissions - get all registrations
 router.get("/submissions", (req, res) => {
-  db.query("SELECT * FROM camp_db ORDER BY id DESC", (err, results) => {
+  db.query("SELECT * FROM camp_db_new ORDER BY id DESC", (err, results) => {
     if (err) {
       console.error("MySQL error:", err);
       return res.status(500).json({ message: "Database error", error: err });
