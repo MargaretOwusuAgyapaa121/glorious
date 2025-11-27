@@ -19,7 +19,7 @@ router.post("/submit", (req, res) => {
 
 // GET /api/submissions - get all registrations
 router.get("/submissions", (req, res) => {
-  db.query("SELECT * FROM applications ORDER BY id DESC", (err, results) => {
+  db.query("SELECT * FROM camp_db ORDER BY id DESC", (err, results) => {
     if (err) return res.status(500).json({ error: err });
     res.json(results);
   });
