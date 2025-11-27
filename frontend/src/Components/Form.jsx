@@ -17,7 +17,8 @@ export default function ApplyForm() {
     e.preventDefault();
 
     try {
-      await axios.post("https://glorious-production.up.railway.app", form);
+      await axios.post("https://glorious-production.up.railway.app/api/submit", form);
+
 
       alert("Form Submitted Successfully!");
 
